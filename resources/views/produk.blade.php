@@ -51,11 +51,55 @@
               </tr> 
           </thead>
       </tbody>
-            
+              <?php $nilai_awal = 0; ?>
+              @while ($nilai_awal < $jenis)
               
+              <tr>
+                  <td>{{ $kode[$nilai_awal] }}</td>
+                  <td>{{ $nama[$nilai_awal] }}</td>
+                  <td>Alat tulis</td>
+                  <td>{{ $harga[$nilai_awal] }}</td>
+              </tr> 
+      
+              <?php $nilai_awal++ ?>
+              @endwhile
           </tbody>
         </table>
-      
+      </div>
+      <div class="col-sm-6">
+        <h4>Form Tambah Produk</h4>
+        <form action="" method="GET">
+        <div class="row">
+        <div class="col-sm-4">
+            <label for="">Kode Produk</label>
+            <input type="text" name="kode_produk" class="fore-control" placeholder="Input Kode Produk">
+          </div>
+          <div class="col-sm-4">
+            <label for="">Nama Produk</label>
+            <input type="text" name="nama_produk" class="fore-control" placeholder="Input Nama Produk">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <label for="">Harga</label>
+            <input type="number" name="Harga" class="fore-control" placeholder="Input Harga"> 
+          </div>
+                <div class="col-sm-4">
+                  <label for="">Jenis Produk</label>
+                  <select name="Prodi Produk" class="form-control">
+                    <option value="">Pilih Produk</option>
+                    <option value="">Alat tulis</option>
+                    <option value="">Elektronik</option>
+                    <option value="">Sembako</option>
+                  </select>
+                </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-sm-12">
+          <button class="btn btn-success" style="width: 50%">Simpan</button>
+          </div>
+        </div>
+        </form>
       </div>
       </div>
       </div>
